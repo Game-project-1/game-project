@@ -2,11 +2,7 @@ window.onload = function() {
   document.getElementById("start-button").onclick = function() {
     startGame();
   };
-  // var score = document.getElementById('score')
-  // score.innerHTML = 'Score: ' + newPlayerScore
-  // newPlayerScore = 50;
-  // console.log(newPlayerScore)
-
+  
   // STARTS GAME
   function startGame() {
     myGameArea.myObstacles = [];
@@ -20,6 +16,7 @@ window.onload = function() {
       "player"
     );
   }
+
   // DRAWS CANVAS
   var lines = 0;
   var myGameArea = {
@@ -132,8 +129,6 @@ window.onload = function() {
   }
 }
 
-
-
 // SCORE POINTS & WIN FUNCTION
   function scorePoints () {
   if(player.y < 20) {
@@ -145,10 +140,8 @@ window.onload = function() {
       alert("YOU WIN! 'Sir, the possibility of successfully navigating an asteroid field is approximately 3,720 to 1.'-C-3PO (The Empire Strikes Back)")
     }
   }
-  // console.log(player.score)
+
 }
-// console.log("the player info ==== ", )
-// newPlayerScore = that.player;
 
 // RELOADS GAME
   function updateGameArea() {
@@ -178,8 +171,7 @@ window.onload = function() {
     
     player.update();
 
-   
-   
+
 
     myGameArea.reqAnimation = window.requestAnimationFrame(updateGameArea);
   }
